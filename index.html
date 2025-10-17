@@ -3,11 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Đang mở trang Flower...</title>
-
-  <!-- Tự động chuyển hướng sau 1.5 giây -->
-  <meta http-equiv="refresh" content="1.5; url=flower.html">
-
+  <title>Trang chính</title>
   <style>
     body {
       margin: 0;
@@ -24,38 +20,29 @@
 
     h1 {
       font-size: 24px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
-    .loader {
-      border: 4px solid rgba(255, 255, 255, 0.3);
-      border-top: 4px solid #4CAF50;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      animation: spin 1s linear infinite;
-      margin-top: 10px;
+    button {
+      padding: 12px 25px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
     }
 
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    a {
-      color: #4CAF50;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+    button:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-  <h1>Đang mở trang Flower...</h1>
-  <p>Nếu không tự chuyển, <a href="flower.html">bấm vào đây</a>.</p>
-  <div class="loader"></div>
+  <h1>Chào mừng đến trang chính</h1>
+  <p>Nhấn nút bên dưới để mở trang Flower:</p>
+  <button onclick="window.location.href='flower.html'">Đi tới Flower</button>
 </body>
 </html>
-
