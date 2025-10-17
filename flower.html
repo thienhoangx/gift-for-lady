@@ -306,8 +306,26 @@
       </div>
     </div>
   </div>
+ <div id="soundcloud-player">
+    <iframe id="scPlayer" width="300" height="80" scrolling="no" frameborder="no" 
+        allow="autoplay" 
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1650676737&auto_play=true&color=%23ff5500">
+    </iframe>
+  </div>
+
+  <script src="https://w.soundcloud.com/player/api.js"></script>
+  <script>
+    const iframeElement = document.getElementById('scPlayer');
+    const widget = SC.Widget(iframeElement);
+
+    widget.bind(SC.Widget.Events.READY, function() {
+      widget.seekTo(54000);  // tua đến 0:54
+      widget.play();          // phát nhạc
+    });
+  </script>
 </body>
 </html>
 
 <script src="main.js"></script>
+
 
