@@ -985,3 +985,9 @@ body {
 .not-loaded * {
   animation-play-state: paused !important;
 }/*# sourceMappingURL=style.css.map */
+#soundcloud-player {
+  position: fixed; /* luôn cố định trên màn hình */
+  top: 10px;       /* cách mép trên 10px */
+  right: 10px;     /* cách mép phải 10px */
+  z-index: 1000;   /* luôn nằm trên hoa */
+}
