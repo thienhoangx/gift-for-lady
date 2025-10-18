@@ -313,11 +313,37 @@
   <div class="flowers">
   </div>
 </div>     
-    
+    <!-- Nút loa + nhạc nền -->
+<button id="soundToggle">🔈</button>
+
+<audio id="bgm" loop preload="auto"
+  src="https://files.catbox.moe/3m0giy.mp3"></audio>
+
+<script>
+  const btn = document.getElementById('soundToggle');
+  const bgm = document.getElementById('bgm');
+  let playing = false;
+
+  function toggleMusic() {
+    if (!playing) {
+      bgm.play().then(() => {
+        playing = true;
+        btn.textContent = '🔊';
+      }).catch(err => console.log('Autoplay bị chặn:', err));
+    } else {
+      bgm.pause();
+      playing = false;
+      btn.textContent = '🔈';
+    }
+  }
+
+  btn.addEventListener('click', toggleMusic);
+</script>
 </body>
 </html>
 
 <script src="main.js"></script>
+
 
 
 
