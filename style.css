@@ -985,4 +985,14 @@ body {
 .not-loaded * {
   animation-play-state: paused !important;
 
+.flower--1 {
+  top: 10vh;    /* cách mép trên 10% chiều cao màn hình */
+  left: 20vw;   /* cách mép trái 20% chiều rộng màn hình */
+  position: absolute;
+}
+.flower--2 {
+  top: 30vh;
+  left: 50vw;
+  position: absolute;
+}
 
