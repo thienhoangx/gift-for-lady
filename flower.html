@@ -313,25 +313,7 @@
   </div>
 </div>     
       
-<div id="musicContainer" style="display:none;">
-  <iframe id="musicFrame" width="100%" height="300" scrolling="no" frameborder="no"
-    allow="autoplay"
-    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1651757685&color=%23393e37&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-  </iframe>
-</div>
 
-<script>
-  // Try autoplay immediately
-  const frame = document.getElementById('musicFrame');
-  frame.src = frame.src; // reloads iframe
-
-  // If autoplay blocked (mobile), wait for tap
-  document.body.addEventListener('click', function playMusic() {
-    document.getElementById('musicContainer').style.display = 'block';
-    const iframe = document.getElementById('musicFrame');
-    iframe.src = iframe.src; // triggers reload + autoplay
-    document.body.removeEventListener('click', playMusic);
-  });
 </script>
 
 </script>
@@ -339,6 +321,7 @@
 </html>
 
 <script src="main.js"></script>
+
 
 
 
